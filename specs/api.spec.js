@@ -37,7 +37,7 @@ describe('На сайте bookstore.demoqa.com', () => {
             const userId = await createUserRes.UserId;
 
             //получаем данные только что созданного пользователя
-            const res = await user.deleteUser(userId);
+            const res = await user.getUser(userId);
             expect(res.status).not.toEqual(404);
         })
 
