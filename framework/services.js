@@ -3,33 +3,19 @@ import config from "../framework/config";
 
 const {url} = config;
 
-//контроллер user
-const user = {
+//контроллер book
+const book = {
 
-    authorized: (payload) => {
+    createBook: (payload) => {
         return supertest(url)
-            .post('/Account/v1/Authorized')
+            .post('/BookStore/v1/Books')
             .set('Accept', 'application/json')
             .send(payload)
     },
 
-    createUser: (payload) => {
+    deleteBook: (payload) => {
         return supertest(url)
-            .post('/Account/v1/User')
-            .set('Accept', 'application/json')
-            .send(payload)
-    },
-
-    deleteUser: (payload) => {
-        return supertest(url)
-            .delete('/Account/v1/User')
-            .set('Accept', 'application/json')
-            .send(payload)
-    },
-
-    getUser: (payload) => {
-        return supertest(url)
-            .get('/Account/v1/User')
+            .delete('/BookStore/v1/Books')
             .set('Accept', 'application/json')
             .send(payload)
     }
@@ -37,4 +23,4 @@ const user = {
 }
 
 
-export default user
+export default book
