@@ -18,6 +18,13 @@ const book = {
             .delete('/BookStore/v1/Books')
             .set('Accept', 'application/json')
             .send(payload)
+    },
+
+    getBook: (payload) => {
+        return supertest(url)
+            .get('/BookStore/v1/Book')
+            .set('Accept', 'application/json')
+            .send(payload)
     }
 
 }
