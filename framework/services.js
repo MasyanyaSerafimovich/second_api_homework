@@ -25,6 +25,13 @@ const book = {
             .get('/BookStore/v1/Book')
             .set('Accept', 'application/json')
             .send(payload)
+    },
+
+    updateBook: (payload, isbn) => {
+        return supertest(url)
+            .put(`/BookStore/v1/Book/${isbn}`)
+            .set('Accept', 'application/json')
+            .send(payload)
     }
 
 }

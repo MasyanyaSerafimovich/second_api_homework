@@ -27,6 +27,18 @@ const config = {
         userId:"eccee50f-0510-44aa-8eb0-18bca8a1b647"
     },
 
+    //данные для удаления измененной книги
+    deleteChangedBookData: {
+        isbn: "978-5-270-00101-8",
+        userId:"eccee50f-0510-44aa-8eb0-18bca8a1b647"
+    },
+
+    //данные для обновления книги
+    updateBookData: {
+        isbn: "978-5-270-00101-8",
+        userId:"eccee50f-0510-44aa-8eb0-18bca8a1b647"
+    },
+
     /**
     * данные для параметризованного теста
     *
